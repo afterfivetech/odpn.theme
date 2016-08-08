@@ -1,0 +1,5 @@
+recursive-include odpn *
+include *.txt
+include *.rst
+recursive-include docs *
+global-exclude *pyc
