@@ -1,1 +1,1 @@
-- Afterfive Technologies, joemariedimzon@gmail.com
+- joemariedimzon, joemariedimzon@gmail.com

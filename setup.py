@@ -20,7 +20,7 @@ long_description = (
 setup(
     name='odpn.theme',
     version='1.0a1',
-    description="ODPN Theme",
+    description="Theme for ODPN",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
@@ -33,7 +33,7 @@ setup(
         "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
     ],
     keywords='Python Plone',
-    author='Afterfive Technologies',
+    author='joemariedimzon',
     author_email='joemariedimzon@gmail.com',
     url='https://pypi.python.org/pypi/odpn.theme',
     license='GPL version 2',
@@ -46,6 +46,8 @@ setup(
         'plone.api',
         'setuptools',
         'z3c.jbot',
+        'plone.app.theming',
+        'plone.app.themingplugins',
     ],
     extras_require={
         'test': [

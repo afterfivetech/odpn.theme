@@ -1,4 +1,4 @@
-odpn.theme Copyright 2015, Afterfive Technologies
+odpn.theme Copyright 2015, joemariedimzon
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License version 2
