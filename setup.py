@@ -31,8 +31,8 @@ setup(name='odpn.theme',
           'collective.grok',
           'plone.app.referenceablebehavior',
           'collective.dexteritytextindexer',
-          'plone.app.multilingual',
-          'plone.multilingualbehavior',
+#          'plone.app.multilingual',
+#          'plone.multilingualbehavior',
           'z3c.jbot'
           # -*- Extra requirements: -*-
       ],
