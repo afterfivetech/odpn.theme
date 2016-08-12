@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<layers>
-    <layer name="odpn.theme"
-        interface="odpn.theme.interfaces.IProductSpecific" />
-</layers>

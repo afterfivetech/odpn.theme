@@ -1,55 +1,63 @@
-from setuptools import setup, find_packages
-import os
+# -*- coding: utf-8 -*-
+"""Installer for the odpn.theme package."""
 
-version = '1.0'
+from setuptools import find_packages
+from setuptools import setup
 
-setup(name='odpn.theme',
-      version=version,
-      description="ODPN Theme",
-      long_description=open("README.rst").read() + "\n" +
-                       open(os.path.join("docs", "HISTORY.rst")).read(),
-      # Get more strings from
-      # http://pypi.python.org/pypi?%3Aaction=list_classifiers
-      classifiers=[
+
+long_description = (
+    open('README.rst').read() +
+    '\n' +
+    'Contributors\n' +
+    '============\n' +
+    '\n' +
+    open('CONTRIBUTORS.rst').read() +
+    '\n' +
+    open('CHANGES.rst').read() +
+    '\n')
+
+
+setup(
+    name='odpn.theme',
+    version='1.0a1',
+    description="Theme for ODPN",
+    long_description=long_description,
+    # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
+    classifiers=[
+        "Environment :: Web Environment",
         "Framework :: Plone",
+        "Framework :: Plone :: 5.0",
         "Programming Language :: Python",
-        "Topic :: Software Development :: Libraries :: Python Modules",
+        "Programming Language :: Python :: 2.7",
+        "Operating System :: OS Independent",
+        "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
+    ],
+    keywords='Python Plone',
+    author='joemariedimzon',
+    author_email='joemariedimzon@gmail.com',
+    url='https://pypi.python.org/pypi/odpn.theme',
+    license='GPL version 2',
+    packages=find_packages('src', exclude=['ez_setup']),
+    namespace_packages=['odpn'],
+    package_dir={'': 'src'},
+    include_package_data=True,
+    zip_safe=False,
+    install_requires=[
+        'plone.api',
+        'setuptools',
+        'z3c.jbot',
+        'plone.app.theming',
+        'plone.app.themingplugins',
+    ],
+    extras_require={
+        'test': [
+            'plone.app.testing',
+            'plone.app.contenttypes',
+            'plone.app.robotframework[debug]',
         ],
-      keywords='',
-      author='Inigo Consulting',
-      author_email='team@inigo-tech.com',
-      url='http://github.com/inigoconsulting/',
-      license='gpl',
-      packages=find_packages(),
-      namespace_packages=['odpn'],
-      include_package_data=True,
-      zip_safe=False,
-      install_requires=[
-          'setuptools',
-          'plone.app.dexterity [grok, relations]',
-          'plone.namedfile [blobs]',
-          'collective.grok',
-          'plone.app.referenceablebehavior',
-          'collective.dexteritytextindexer',
-#          'plone.app.multilingual',
-#          'plone.multilingualbehavior',
-          'z3c.jbot'
-          # -*- Extra requirements: -*-
-      ],
-      extras_require={
-          'test': [
-              'plone.app.testing',
-           ],
-      },
-      entry_points="""
-      # -*- Entry points: -*-
-      [z3c.autoinclude.plugin]
-      target = plone
-      """,
-      # The next two lines may be deleted after you no longer need
-      # addcontent support from paster and before you distribute
-      # your package.
-      setup_requires=["PasteScript"],
-      paster_plugins=["templer.localcommands"],
-
-      )
+    },
+    entry_points="""
+    [z3c.autoinclude.plugin]
+    target = plone
+    """,
+)
