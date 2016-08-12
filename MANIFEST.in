@@ -1,0 +1,4 @@
+graft src/odpn
+graft docs
+include *.rst
+global-exclude *.pyc
