@@ -159,7 +159,37 @@ h6 > a{
 #footer-container{
     #footer-top{
         background-color: #f9f9f9;
-        padding: 20px 0;
+        padding: 40px 0;
+        .ftop{
+                h4{
+                        color: #333;
+                        a{
+                                color: #333;
+                        }
+                }
+                ul{
+                    list-style: none;
+                    padding-left: 0;
+                    li{
+                        padding-top: 5px;
+                        a{
+                            text-align: inherit;
+                            padding-left: 25px;
+                        }
+                        a:hover{
+                            color: #29abe2;
+                        }
+                        a:before{
+                            content: "⬢";
+                            position: absolute;
+                            font-size: 10px;
+                            margin-top: 3px;
+                            left: 15px;
+                            color: #a7daf2;
+                        }
+                    }
+                }
+        }
     }
     #footer-bottom{
         background-color: #ff0000;        
