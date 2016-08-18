@@ -44,14 +44,23 @@
   
   <!-- front-page slider -->
   <drop
-    css:theme-children="#main-slider"
+    css:theme="#main-slider"
     css:if-not-content=".section-front-page" />
   <drop
-    css:theme-children="#main-slider"
+    css:theme="#main-slider"
     css:if-content=".template-edit" />
   <drop
-    css:theme-children="#main-slider"
+    css:theme="#main-slider"
     css:if-content=".template-topbar-manage-portlets" />
+  
+  <!--breadcrums-->
+  <drop
+    css:theme="#breadcrumbs-container"
+    css:if-content=".template-document_view.section-front-page" />
+  <replace css:theme-children="#breadcrumbs-container > div > .breadcrumb"
+           css:if-not-content=".template-document_view.section-front-page">
+        <xsl:copy-of css:select="#portal-breadcrumbs > div > ol > li"/>
+  </replace>
   
   <!-- Central column -->
   <replace css:theme="#content-container" method="raw">

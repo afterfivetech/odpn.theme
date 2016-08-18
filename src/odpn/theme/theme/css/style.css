@@ -91,7 +91,25 @@ h6 > a{
     }
 }
 
-//slider
+/*breadcrumbs*/
+#breadcrumbs-container{
+    .breadcrumb{
+        background: none transparent;
+        margin-bottom: 0;
+        > li:last-child,
+        > li+li:before{
+            color: #fff;
+        }
+    }
+    
+    background-color: #ccc;
+    
+    -webkit-box-shadow: inset 0px 5px 10px 0px rgba(102,102,102,0.5);
+    -moz-box-shadow: inset 0px 5px 10px 0px rgba(102,102,102,0.5);
+    box-shadow: inset 0px 5px 10px 0px rgba(102,102,102,0.5);
+}
+
+/*slider*/
 #main-slider{
     background-color: #ccc;
     min-height: 40px;
