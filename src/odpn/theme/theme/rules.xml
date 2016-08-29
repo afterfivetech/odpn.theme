@@ -42,6 +42,30 @@
   <!-- move global nav -->
   <replace css:theme-children=".main-menu" css:content-children="#portal-globalnav" />
   
+  <!--login-->
+  <after css:theme=".search-trigger" css:if-content="#portal-anontools">
+    <xsl:element name="a">
+      <xsl:attribute name="href">
+        <xsl:value-of select="//a[@id='personaltools-login']/@href" />
+      </xsl:attribute>
+      <xsl:attribute name="data-pat-plone-modal">
+        <xsl:value-of select="//a[@id='personaltools-login']/@data-pat-plone-modal" />
+      </xsl:attribute>
+      <xsl:attribute name="id">
+        <xsl:value-of select="//a[@id='personaltools-login']/@id" />
+      </xsl:attribute>
+      <xsl:attribute name="class">
+        <xsl:value-of select="//a[@id='personaltools-login']/@class" />
+      </xsl:attribute>
+      <xsl:attribute name="title">
+        <xsl:value-of select="//a[@id='personaltools-login']/@title" />
+      </xsl:attribute>
+      <span class="hb hb-xs hb-custom hb-tencent-weibo">
+        <i class="fa fa-sign-in" aria-hidden="true"></i>
+      </span>
+    </xsl:element>
+  </after>
+  
   <!--search-->
   <replace css:theme-children=".modal-body" css:content-children="#portal-searchbox" />
   
