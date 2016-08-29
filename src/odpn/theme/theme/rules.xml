@@ -42,6 +42,9 @@
   <!-- move global nav -->
   <replace css:theme-children=".main-menu" css:content-children="#portal-globalnav" />
   
+  <!--search-->
+  <replace css:theme-children=".modal-body" css:content-children="#portal-searchbox" />
+  
   <!-- front-page slider -->
   <drop
     css:theme="#main-slider"
