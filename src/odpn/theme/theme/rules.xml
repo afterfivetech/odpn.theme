@@ -139,4 +139,15 @@
     </replace>
   </rules>
   
+  <!--Footer-->
+  <replace css:theme-children="#footer-top > div">
+    <xsl:for-each css:select="#portal-footer-wrapper > div > div > .portletWrapper">
+      <div class="ftop col-md-3">
+        <xsl:copy-of css:select=".portletContent > *"/>
+      </div>
+    </xsl:for-each>
+    
+  </replace>
+  
+  
 </rules>
