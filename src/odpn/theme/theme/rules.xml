@@ -37,7 +37,7 @@
     css:if-content=".userrole-authenticated"
     />
   <!--branding-->
-  <replace css:theme=".branding" css:content="#portal-logo" />
+  <replace css:theme-children=".branding" css:content="#portal-logo" />
 
   <!-- move global nav -->
   <replace css:theme-children=".main-menu" css:content-children="#portal-globalnav" />
