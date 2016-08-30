@@ -76,7 +76,7 @@ h6 > a{
     #search-container{
         text-align: center;
         a{
-            margin: 27px 1px 0;
+            margin: 10px 1px 20px;
         }
     }
         
@@ -95,6 +95,9 @@ h6 > a{
             height: 100px;
             position: relative;
             font-size: 24px;
+            a{
+                margin: 27px 1px 0;
+            }
             /*span {*/
             /*    background-color: red;*/
             /*    display: inline-block;*/
