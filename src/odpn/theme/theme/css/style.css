@@ -16,6 +16,9 @@ h6 > a{
 #header-bar{
     .branding{
         text-align: center;
+        a{
+            float: none;
+        }
     }
     
     .main-menu{
