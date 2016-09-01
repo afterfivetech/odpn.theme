@@ -228,3 +228,43 @@ h6 > a{
         box-shadow: inset 0px 5px 10px 0px rgba(102,102,102,0.5);
     }
 }
+
+/*profile widget*/
+.prof-widget{
+    display: block;
+    padding: 4px;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+    
+    .prof-banner{
+        min-height: 100px;
+        background-color: #f9f9f9;
+    }
+    .prof-image{
+        text-align: center;
+        margin-top: -75px;
+        margin-bottom: 20px;
+        .clip-svg {
+        width: 0;
+        height: 0;
+        }
+            
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .polygon-clip-hexagon {
+            -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            -webkit-clip-path: url("#polygon-clip-hexagon");
+            clip-path: url("#polygon-clip-hexagon");
+        }
+    }
+}
