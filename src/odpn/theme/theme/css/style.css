@@ -85,6 +85,17 @@ h6 > a{
         
 }
 
+/*override search result*/
+.pat-livesearch {
+    .livesearch-results{
+        position: static;
+    }
+    input.searchButton{
+        display: block;
+        margin: 10px 0;
+    }
+}
+
 @media (min-width: 768px){
     
     #header-bar{
