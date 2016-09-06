@@ -239,3 +239,11 @@ h6 > a{
         box-shadow: inset 0px 5px 10px 0px rgba(102,102,102,0.5);
     }
 }
+
+/*new content type icons*/
+body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-odpn-profile-profile:after{
+    content: '\e800';
+}
+body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-odpn-profile-membership:after{
+    content: '\f234';
+}
