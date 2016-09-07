@@ -245,5 +245,11 @@ body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-odpn-profile-profil
     content: '\e800';
 }
 body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-odpn-profile-membership:after{
-    content: '\f234';
+    content: '\e842';
+}
+body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-odpn-resources-resource:after{
+    content: '\e830';
+}
+body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-odpn-resources-resources:after{
+    content: '\e830';
 }
