@@ -209,7 +209,7 @@ h6 > a{
                     list-style: none;
                     padding-left: 0;
                     li{
-                        padding-top: 5px;
+                        margin-bottom: 5px;
                         a{
                             text-align: inherit;
                             padding-left: 25px;
@@ -245,5 +245,11 @@ body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-odpn-profile-profil
     content: '\e800';
 }
 body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-odpn-profile-membership:after{
-    content: '\f234';
+    content: '\e842';
+}
+body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-odpn-resources-resource:after{
+    content: '\e830';
+}
+body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-odpn-resources-resources:after{
+    content: '\e830';
 }
