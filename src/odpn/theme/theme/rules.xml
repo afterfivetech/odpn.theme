@@ -82,12 +82,6 @@
     css:theme="#main-slider"
     css:if-content=".template-topbar-manage-portlets" />
   
-  <!-- dynamic slider content -->
-<replace
-  css:theme="#carousel-example-generic"
-  css:content="#carousel-example-generic"
-  href="/slider-images/@@slider-images" />
-  
   <!--breadcrums-->
   <drop
     css:theme="#breadcrumbs-container"
