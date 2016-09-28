@@ -256,3 +256,12 @@ body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-odpn-resources-reso
 body#visual-portal-wrapper.pat-plone #edit-zone .contenttype-odpn-resources-resources:after{
     content: '\e830';
 }
+
+/*entry title*/
+div.entries{
+    .entry{
+        header{
+            font-weight: bold;
+        }
+    }
+}
