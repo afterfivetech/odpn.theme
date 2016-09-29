@@ -1,0 +1,7 @@
+<div tal:define="results view/contents" tal:condition="results">
+    <h3 tal:content="view/data/header_title"></h3>
+    <div tal:repeat="result results">
+        <h5 tal:content="result/title"></h5>
+        <p tal:define="desc result/description" tal:content="python: view.trim_description(desc)"/>
+    </div>
+</div>
