@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<portlets>
+
+<!-- -*- extra stuff goes here -*- -->
+    <portlet
+        addview="latest_blogs.portlet"
+        title="Latest Blogs/News Portlet"
+        description=""
+    />
+
+</portlets>
