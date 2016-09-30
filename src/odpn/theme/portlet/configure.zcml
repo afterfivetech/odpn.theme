@@ -14,6 +14,15 @@
             addview=".latest_blogs_portlet.AddForm"
             editview=".latest_blogs_portlet.EditForm"
             />
+        
+        <plone:portlet
+            name="two_column_news.portlet"
+            interface=".two_column_news_portlet.ITwoColumnsNewsPortlet"
+            assignment=".two_column_news_portlet.Assignment"
+            renderer=".two_column_news_portlet.Renderer"
+            addview=".two_column_news_portlet.AddForm"
+            editview=".two_column_news_portlet.EditForm"
+            />
 
 		
 		
