@@ -1,4 +1,4 @@
-<div tal:define="results view/contents" tal:condition="results">
+<div class="portletContent" tal:define="results view/contents" tal:condition="results">
     <h3 tal:content="view/data/header_title"></h3>
     <div tal:repeat="result results">
         <h5 tal:content="result/title"></h5>
