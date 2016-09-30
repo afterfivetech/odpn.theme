@@ -88,6 +88,17 @@
     css:content="#carousel-example-generic"
     href="/slider-images/@@slider-images" />
   
+  <!--drop mainpage portlet-->
+  <drop
+    css:content="#mainpage-portlet" />
+  
+  <!--replace main container child if mainpage portlet-->
+  <replace
+    css:theme-children="#main-container"
+    css:if-content="#mainpage-portlet">
+    <xsl:copy-of css:select="#mainpage-portlet"/>
+  </replace>
+  
   <!--breadcrums-->
   <drop
     css:theme="#breadcrumbs-container"

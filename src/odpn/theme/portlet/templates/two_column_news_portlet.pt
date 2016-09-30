@@ -1,36 +1,47 @@
-<article class="entry-wicon-listing">
-    <tal:if tal:define="results python: view.contents('first_column_source')" tal:condition="results">
-        <tal:entry tal:repeat="result results">
-            <a tal:attributes="src python: result.getObject().absolute_url()" class="hb-sm-margin">
-                <span class="hb hb-sm hb-custom hb-tencent-weibo">
-                    <i class="fa fa-cogs"></i>
-                </span>
-            </a>
-            <div class="entry-content">
-                <h4 tal:content="result/title"></h4>
-                <p tal:content="python: view.trim_description(result.description)"/>
-            </div>
-        </tal:entry>
-    </tal:if>
-</article>
-
-<article class="post-listing">
-    <tal:if tal:define="results python: view.contents('second_column_source')" tal:condition="results">
-        <tal:entry tal:repeat="result results">
-            <div class="post-img" style="width:30%;">
-                <tal:if tal:condition="python: hasattr(result.getObject(), 'image')">
-                    <a tal:attributes="href python: result.getObject().absolute_url()">
-                        <img tal:condition="python: result.getObject().image" tal:attributes="src python: result.getObject().absolute_url()+'/@@images/image/mini'"/>
-                    </a>
-                </tal:if>
-            </div>
-            <div class="post-content" style="width:70%">
-                <a tal:attributes="href python: result.getObject().absolute_url()">
-                    <h3 class="post-content" tal:content="result/title"></h3>
+<div id="mainpage-portlet" class="row">
+    <div class="col-md-5">
+        <tal:if tal:define="results python: view.contents('first_column_source')" tal:condition="results">
+            <tal:entry tal:repeat="result results">
+                <article class="entry-wicon-listing">
+                <a tal:attributes="src python: result.getObject().absolute_url()" class="hb-sm-margin">
+                    <span class="hb hb-sm hb-custom hb-tencent-weibo">
+                        <i class="fa fa-cogs"></i>
+                    </span>
                 </a>
-                <p tal:content="python: view.trim_description(result.description)"/>
-            </div>
-            <div class="clearfix"></div>
-        </tal:entry>
-    </tal:if>
-</article>
+                <div class="entry-content">
+                    <h4 tal:content="result/title"></h4>
+                    <p tal:content="python: view.trim_description(result.description)"/>
+                </div>
+                </article>
+            </tal:entry>
+        </tal:if>
+    </div>
+    
+    <div class="col-md-7">
+        
+        <tal:if tal:define="results python: view.contents('second_column_source')" tal:condition="results">
+            <tal:entry tal:repeat="result results">
+                <article class="post-listing">
+                    <div class="post-img" style="width:30%;">
+                        <tal:if tal:condition="python: hasattr(result.getObject(), 'image')">
+                            <a tal:attributes="href python: result.getObject().absolute_url()">
+                                <img tal:condition="python: result.getObject().image" tal:attributes="src python: result.getObject().absolute_url()+'/@@images/image/mini'"/>
+                            </a>
+                        </tal:if>
+                    </div>
+                    <div class="post-content" style="width:70%">
+                        <h3 class="post-title">
+                            <a tal:attributes="href python: result.getObject().absolute_url()">
+                                <span tal:content="result/title" />
+                            </a>
+                        </h3>
+                        <p tal:content="python: view.trim_description(result.description)"/>
+                    </div>
+                    <div class="clearfix"></div>
+                </article>
+            </tal:entry>
+        </tal:if>
+        
+    </div>
+    
+</div>
