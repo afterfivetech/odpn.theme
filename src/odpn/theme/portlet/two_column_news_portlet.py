@@ -13,6 +13,7 @@ from zope.schema.interfaces import IContextSourceBinder
 from zope.component.hooks import getSite
 from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
 from plone.app.vocabularies.catalog import CatalogSource
+from plone.directives import form
 
 class ITwoColumnsNewsPortlet(IPortletDataProvider):
     
@@ -21,10 +22,11 @@ class ITwoColumnsNewsPortlet(IPortletDataProvider):
         required = True,
     )
     
-    first_column_source = schema.Choice(
-        title = u"First Column Source Data",
+    form.widget(first_column_source = 'plone.app.z3cform.wysiwyg.WysiwygFieldWidget')
+    first_column_source = schema.Text(
+        title = u"First Column Static Portlet",
         required = True,
-        source = CatalogSource(portal_type=('Topic', 'Collection'), default_query='path:'),
+        #source = CatalogSource(portal_type=('Topic', 'Collection'), default_query='path:'),
     )
     
     second_column_source = schema.Choice(
