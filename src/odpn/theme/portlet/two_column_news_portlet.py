@@ -56,6 +56,7 @@ class Renderer(base.Renderer):
         data = self.data
         context = self.context
         column_source = getattr(data, column_name)
+        results = []
         if column_source:
             uid = column_source
             brains = context.portal_catalog.searchResults(UID=uid)
