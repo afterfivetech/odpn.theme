@@ -3,5 +3,6 @@
     <div tal:repeat="result results">
         <h5 tal:content="result/title"></h5>
         <p tal:define="desc result/description" tal:content="python: view.trim_description(desc)"/>
+        <a tal:attributes="href python: result.getObject().absolute_url()">Read more</a>
     </div>
 </div>
