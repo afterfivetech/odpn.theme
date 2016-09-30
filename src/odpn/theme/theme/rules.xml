@@ -92,7 +92,7 @@
   <drop
     css:content="#mainpage-portlet" />
   
-  <!--replace main container child if mainpage portlet-->
+  <!--replace main container children if there's a mainpage portlet-->
   <replace
     css:theme-children="#main-container"
     css:if-content="#mainpage-portlet">
