@@ -53,25 +53,29 @@ class Renderer(base.Renderer):
     def contents(self):
         data = self.data
         context = self.context
+        contents = {}
         results = []
+        collection_path = ''
         
         if data.source_data:
             uid = data.source_data
             brains = context.portal_catalog.searchResults(UID=uid)
             if brains:
                 brain = brains[0]
+                
                 collection = context.unrestrictedTraverse(brain.getPath()).queryCatalog({'sort_on':'created',
                                                                                          'sort_order':'reverse',
                                                                                          'sort_limit':4})
                 
                 
-                    
+                if len(collection) > 5:
+                    collection_path = collection_path = brain.getURL()
                 datas = [coll for coll in collection]
                 if datas:
                     datas.sort(key=lambda x: x.created, reverse=True)
                     results = datas[:4]
-        
-        return results
+        contents = {'results':results, 'path':collection_path}
+        return contents
     
     def trim_description(self, value):
         if len(value) > 160:
