@@ -208,6 +208,14 @@ h6 > a{
                                 color: #333;
                         }
                 }
+                dl{
+                    dt{
+                        margin-bottom: 10px;
+                    }
+                    dd{
+                        margin-bottom: 5px;
+                    }
+                }
                 ul{
                     list-style: none;
                     padding-left: 0;
