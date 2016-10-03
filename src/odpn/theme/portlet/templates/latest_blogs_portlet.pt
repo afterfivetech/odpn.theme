@@ -1,7 +1,7 @@
-<div class="portletContent" tal:define="results view/contents" tal:condition="results">
-    <h3 tal:content="view/data/header_title"></h3>
-    <div tal:repeat="result results">
-        <a tal:attributes="href python: result.getObject().absolute_url()"><h5 tal:content="result/title"></h5></a>
+<dl class="portletContent" tal:define="results view/contents" tal:condition="results">
+    <dt tal:content="view/data/header_title" />
+    <dd tal:repeat="result results">
+        <a tal:attributes="href python: result.getObject().absolute_url()"><span tal:content="result/title" /></a>
         <!--<p tal:define="desc result/description" tal:content="python: view.trim_description(desc)"/>-->
-    </div>
-</div>
+    </dd>
+</dl>
