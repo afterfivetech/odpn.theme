@@ -1,7 +1,12 @@
-<dl class="portletContent" tal:define="results view/contents" tal:condition="results">
-    <dt tal:content="view/data/header_title" />
-    <dd tal:repeat="result results">
-        <a tal:attributes="href python: result.getObject().absolute_url()"><span tal:content="result/title" /></a>
-        <!--<p tal:define="desc result/description" tal:content="python: view.trim_description(desc)"/>-->
-    </dd>
+<dl class="portletContent" tal:define="contents view/contents" tal:condition="python: contents['results']">
+    <tal:block tal:define="results python: contents['results']">
+        <dt tal:content="view/data/header_title" />
+        <dd tal:repeat="result results">
+            <a tal:attributes="href python: result.getObject().absolute_url()"><span tal:content="result/title" /></a>
+            <!--<p tal:define="desc result/description" tal:content="python: view.trim_description(desc)"/>-->
+        </dd>
+        <tal:if tal:condition="python: contents['path']">
+            <a tal:attributes="href python: contents['path']">Read More ...</a>
+        </tal:if>
+    </tal:block>
 </dl>
