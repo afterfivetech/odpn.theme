@@ -15,8 +15,8 @@
                 </div>
                 </article>
             </tal:entry>
-            </tal:if>-->
-        </tal:block>
+            </tal:if>
+        </tal:block>-->
         
     </div>
     
@@ -38,7 +38,7 @@
                                 <span tal:content="result/title" />
                             </a>
                         </h3>
-                        <!--<p tal:content="python: view.trim_description(result.description)"/>-->
+                        <p tal:content="python: view.trim_description(result.description)"/>
                     </div>
                     <div class="clearfix"></div>
                 </article>
