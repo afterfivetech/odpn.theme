@@ -6,7 +6,7 @@
             <!--<p tal:define="desc result/description" tal:content="python: view.trim_description(desc)"/>-->
         </dd>
         <tal:if tal:condition="python: contents['path']">
-            <a tal:attributes="href python: contents['path']">More >>></a>
+            <a tal:attributes="href python: contents['path']">More <span style="font-size: larger">&#187;</span></a>
         </tal:if>
     </tal:block>
 </dl>
