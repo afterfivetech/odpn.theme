@@ -108,6 +108,13 @@
         <xsl:copy-of css:select="#portal-breadcrumbs > div > ol > li"/>
   </replace>
   
+  <!--global message-->
+  <replace css:theme-children="#above-content">
+    <div class="container">
+      <xsl:copy-of css:select="#global_statusmessage"/>
+    </div>
+  </replace>
+  
   <!-- Central column -->
   <replace css:theme="#content-container" method="raw">
 
