@@ -91,12 +91,10 @@
   <!--drop mainpage portlet-->
   <drop
     css:content="#mainpage-portlet" />
-  
   <!--replace main container children if there's a mainpage portlet-->
-  <replace
-    css:theme-children="#main-container"
-    css:if-content="#mainpage-portlet">
-    <xsl:copy-of css:select="#mainpage-portlet"/>
+  <replace css:theme-children="#main-container"
+           css:if-content="#mainpage-portlet">
+      <xsl:copy-of css:select="#mainpage-portlet"/>
   </replace>
   
   <!--breadcrums-->
